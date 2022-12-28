@@ -1,0 +1,12 @@
+<h1>Register component</h1>
+<form [formGroup]="loginform" (ngSubmit)="addProduct()" >
+<label>Product Id</label>
+<input type="number" placeholder="Enter the Product Id" formControlName="productId"><br/><br/>
+<label>Product Name</label>
+<input type="text" placeholder="Enter the Product name " formControlName="productName"><br/><br/>
+<label>Product Price</label>
+<input type="number" placeholder="Enter the Product price " formControlName="productPrice"><br/><br/>
+<button type="submit">Register</button><br/>
+</form>
+
+

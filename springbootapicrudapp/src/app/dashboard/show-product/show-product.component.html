@@ -1,0 +1,32 @@
+
+<section>
+<button (click)="showProduct()">{{btnname}}</button>
+<div class="container py-5 h-10">
+    <div class="row justify-content-left align-items-left h-1">
+      <div class="col-7 col-lg-7 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-7 p-md-10">
+              <div>
+                <table class="table">
+                <tr>
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                <tr *ngFor="let item of productlist">
+                    <td>{{item.productId}}</td>
+                    <td>{{item.productName}}</td>
+                    <td>{{item.productPrice}}</td>
+                    <td><button type="button" class="fa fa-pencil-square-o" style="font-size:20px;color:red"  (click)="updateProduct(item)">Edit</button></td>
+                    <td><button type="button" class="fa fa-trash-o" style="font-size:20px;color:red"  (click)="deleteProduct(item.productId)">Delete</button></td>
+             </tr>
+        </table>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+</section>
